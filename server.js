@@ -3,6 +3,12 @@ import cors from 'cors';
 import bodyParser from'body-parser'
 import mongoose from 'mongoose';
 import userModal from './userModal.js';
+import  dotenv from 'dotenv';
+
+
+dotenv.config({
+  path:"../.env"
+})
 
 
 const app = express();
@@ -17,7 +23,10 @@ app.use(cors(
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}));
 
-mongoose.connect('mongodb+srv://miru6141:zd3kjRtS3Ct17TS5@cluster0.nlemmqh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+const DB_URL=process.env.DB_URL;
+console.log(DB_URL)
+
+mongoose.connect(DB_URL);
 
 const PORT = process.env.PORT || 3000;
 
