@@ -17,7 +17,7 @@ app.use(cors(
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}));
 
-mongoose.connect('mongodb://127.0.0.1:27017/Assignment');
+mongoose.connect('mongodb+srv://miru6141:zd3kjRtS3Ct17TS5@cluster0.nlemmqh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 const PORT = process.env.PORT || 3000;
 
