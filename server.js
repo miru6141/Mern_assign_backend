@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin: 'https://assignmentmern121.netlify.app/',
+        origin: 'https://assignmentmern121.netlify.app',
     }
        
 ))
